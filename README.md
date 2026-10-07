@@ -1,41 +1,38 @@
-# NekoAI
+# NekoAI - Autonomous AI Companion
 
-NekoAI is a fully autonomous AI companion built from scratch.
+NekoAI is a fully autonomous AI companion built from scratch to help you with coding, learning, research, game development, and more.
 
-Mission:
-- help the owner
-- learn continuously
-- avoid mistakes
-- improve solutions
-- remember important things
-- stay honest and useful
+## Mission
 
-Core loop:
-Observe → Understand → Reason → Plan → Act → Evaluate → Learn → Remember
+Create an AI that can:
+- Think and reason
+- Plan and execute
+- Learn from experience
+- Remember important things
+- Help you achieve your goals
+- Work completely offline
 
-## Current implementation
+## Features
 
-This repository contains the first real local starter version of NekoAI.
-It includes:
-- persistent memory
-- local knowledge base
-- task planning
-- multiple specialized agents
-- personality and tone system
-- command-line chat loop
+✅ **Autonomous Reasoning Loop**: Observe → Understand → Reason → Plan → Act → Evaluate → Learn → Remember
+✅ **Memory System**: Persistent local storage of conversations, goals, and learning
+✅ **Multi-Agent Architecture**: Specialized agents for coding, learning, research, websites, Roblox, and Unreal Engine
+✅ **Goal Manager**: Track and prioritize your objectives
+✅ **Critic Engine**: Evaluate solutions for quality and alignment
+✅ **Learning Engine**: Improve responses based on interaction history
+✅ **Personality System**: Friendly, motivating, and supportive voice
+✅ **No External APIs**: Works completely locally
 
-## Supported areas
+## Supported Domains
 
-- Programming
-- AI reasoning
-- Learning and study planning
-- Research and comparison
-- Web development
-- Roblox and Lua
-- Unreal Engine
-- Game design
+- **Coding**: Python, JavaScript, TypeScript, Lua, C#, Java, Go, Rust
+- **Learning**: Study plans, quizzes, worksheets, exam prep
+- **Research**: Technology comparison, market analysis, data summaries
+- **Websites**: Full-stack web apps, APIs, dashboards, databases
+- **Roblox**: Lua scripting, game systems, NPC AI, weapons, UI, economy
+- **Unreal Engine**: Blueprints, gameplay logic, level design
 
-## Run it
+## Quick Start
 
 ```bash
 python3 -m venv .venv
@@ -43,24 +40,63 @@ source .venv/bin/activate
 python main.py
 ```
 
-## Example prompts
+## Example Prompts
 
-- "Help me build a study plan for math and physics"
-- "Plan my coding project for a personal portfolio website"
-- "Create a Python script for a quiz app"
-- "Help me design a simple Roblox game"
-- "Compare React vs FastAPI for my project"
+**Roblox Game Development**:
+- "Build me a Roblox game foundation"
+- "Create an NPC AI system for my game"
+- "Design a weapon system"
+- "Build an economy system"
+- "Create UI elements for my game"
 
-## Long-term vision
+**Coding**:
+- "Generate a Python script for X"
+- "Fix this bug in my code"
+- "Explain how recursion works"
+- "Review my project structure"
 
-NekoAI is designed to become:
-- friend
-- teacher
-- programmer
-- researcher
-- game developer
-- design partner
-- study companion
-- desktop assistant
+**Learning**:
+- "Create a study plan for calculus"
+- "Make me a quiz on biology"
+- "Explain quantum mechanics simply"
+- "Build an exam prep schedule"
 
-The final objective is a local companion that can observe, think, plan, act, learn, remember, and improve without relying on external commercial AI APIs.
+**Research**:
+- "Compare React vs Vue for my project"
+- "Analyze Python vs Java for backend"
+- "Research best practices for APIs"
+
+**Web Development**:
+- "Design a full-stack portfolio website"
+- "Build a REST API structure"
+- "Plan a dashboard database schema"
+
+## Architecture
+
+NekoAI consists of these core modules:
+
+- **Brain** (`nekoai/__init__.py`): Core cognitive loop and request handling
+- **Memory** (`nekoai/memory.py`): Persistent JSON-based storage
+- **Knowledge** (`nekoai/knowledge.py`): Local knowledge base and topic matching
+- **Planner** (`nekoai/planner.py`): Creates structured plans based on intent
+- **Agents** (`nekoai/agents.py`): Specialized task handlers
+- **Goal Manager** (`nekoai/goal_manager.py`): Tracks owner objectives
+- **Critic** (`nekoai/critic.py`): Evaluates solution quality
+- **Learning** (`nekoai/learning.py`): Stores lessons for improvement
+- **Personality** (`nekoai/personality.py`): Voice and tone settings
+
+## Long-Term Vision
+
+NekoAI is designed to evolve into:
+
+- A desktop assistant with file/project management
+- A web dashboard for organizing work
+- Voice interaction with avatar animation
+- Stronger long-term memory and learning
+- Integration with development tools
+- Autonomous task automation
+- Real-time collaboration features
+
+## License
+
+This project is under active development and is open for contributions.
