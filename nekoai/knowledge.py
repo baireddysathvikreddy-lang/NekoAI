@@ -1,8 +1,10 @@
-from typing import Dict, List
+from __future__ import annotations
+
+from typing import List
 
 
 class KnowledgeBase:
-    """Simple local knowledge base for NekoAI."""
+    """Local knowledge base for NekoAI."""
 
     def __init__(self):
         self.categories = {
@@ -30,7 +32,7 @@ class KnowledgeBase:
 
     def search(self, query: str) -> List[str]:
         q = query.lower()
-        matches = []
+        matches: List[str] = []
         for category, keywords in self.categories.items():
             if any(keyword in q for keyword in keywords):
                 matches.append(category)
@@ -39,5 +41,8 @@ class KnowledgeBase:
     def explain(self, query: str) -> str:
         matches = self.search(query)
         if matches == ["general"]:
-            return "This is a general request. I can help with research, coding, studying, and planning."
+            return "This is a general request. I can help with coding, knowledge, research, study planning, and game development."
         return f"Relevant knowledge areas: {', '.join(matches)}."
+
+
+__all__ = ["KnowledgeBase"]

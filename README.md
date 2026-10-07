@@ -1,26 +1,41 @@
 # NekoAI
 
-NekoAI is a fully autonomous AI companion built from scratch. It follows a cognitive loop:
+NekoAI is a fully autonomous AI companion built from scratch.
 
+Mission:
+- help the owner
+- learn continuously
+- avoid mistakes
+- improve solutions
+- remember important things
+- stay honest and useful
+
+Core loop:
 Observe → Understand → Reason → Plan → Act → Evaluate → Learn → Remember
 
-This repository contains the first working starter version of the project: a local Python-based AI companion with memory, planning, and agent-based task handling.
+## Current implementation
 
-## Features
+This repository contains the first real local starter version of NekoAI.
+It includes:
+- persistent memory
+- local knowledge base
+- task planning
+- multiple specialized agents
+- personality and tone system
+- command-line chat loop
 
-- Persistent memory system
-- Knowledge categories and local lookup
-- Goal and task planning
-- Specialized agent modules
-- Interactive CLI chat loop
-- Offline, no external API required
+## Supported areas
 
-## Project structure
+- Programming
+- AI reasoning
+- Learning and study planning
+- Research and comparison
+- Web development
+- Roblox and Lua
+- Unreal Engine
+- Game design
 
-- `main.py` – CLI entry point
-- `nekoai/` – core modules for memory, reasoning, planning, and agents
-
-## Quick start
+## Run it
 
 ```bash
 python3 -m venv .venv
@@ -28,25 +43,24 @@ source .venv/bin/activate
 python main.py
 ```
 
-## Example commands
-
-Type any request into the CLI, for example:
+## Example prompts
 
 - "Help me build a study plan for math and physics"
+- "Plan my coding project for a personal portfolio website"
 - "Create a Python script for a quiz app"
-- "Plan my weekly coding goals"
-- "Research which web stack is best for a simple portfolio site"
+- "Help me design a simple Roblox game"
+- "Compare React vs FastAPI for my project"
 
-## Mission
+## Long-term vision
 
-The long-term goal is to become a loyal digital companion that can:
+NekoAI is designed to become:
+- friend
+- teacher
+- programmer
+- researcher
+- game developer
+- design partner
+- study companion
+- desktop assistant
 
-- help the owner
-- learn continuously
-- reason and plan
-- remember important details
-- work without commercial AI APIs
-
-## License
-
-This project is currently under active development.
+The final objective is a local companion that can observe, think, plan, act, learn, remember, and improve without relying on external commercial AI APIs.
