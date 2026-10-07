@@ -1,11 +1,27 @@
 from __future__ import annotations
 
+from typing import Dict, List
+
+from .agents import (
+    CodingAgent,
+    LearningAgent,
+    ResearchAgent,
+    RobloxAgent,
+    UnrealAgent,
+    WebsiteAgent,
+)
 from .critic import CriticEngine
 from .goal_manager import GoalManager
+from .knowledge import KnowledgeBase
 from .learning import LearningEngine
+from .memory import MemoryStore
+from .personality import Personality
+from .planner import Planner
 
 
 class NekoAI:
+    """Core autonomous AI companion with memory, reasoning, planning, and learning."""
+
     def __init__(self, owner_name: str = "Owner", memory_path: str = "memory/nekoai_memory.json"):
         self.owner_name = owner_name
         self.memory = MemoryStore(memory_path)
@@ -40,7 +56,7 @@ class NekoAI:
             "How can I improve the result?"
         )
 
-    def plan(self, request: str) -> list[str]:
+    def plan(self, request: str) -> List[str]:
         steps = self.planner.build_plan(request)
         return [f"{step.title}: {step.description}" for step in steps]
 
@@ -65,7 +81,7 @@ class NekoAI:
             f"Tell me what you want to build or solve."
         )
 
-    def evaluate(self, request: str, plan: list[str], action: str) -> str:
+    def evaluate(self, request: str, plan: List[str], action: str) -> str:
         return self.critic.review(request, plan, action)
 
     def learn(self, request: str, action: str) -> str:
@@ -74,7 +90,7 @@ class NekoAI:
     def remember(self, key: str, value: str) -> None:
         self.memory.remember(key, value)
 
-    def handle_request(self, request: str) -> dict[str, object]:
+    def handle_request(self, request: str) -> Dict[str, object]:
         observation = self.observe(request)
         understanding = self.understand(request)
         reasoning = self.reason(request)
@@ -116,18 +132,5 @@ class NekoAI:
         lines.append(f"- Learning: {result['learning']}")
         return "\n".join(lines)
 
-
-from .agents import (
-    CodingAgent,
-    LearningAgent,
-    ResearchAgent,
-    RobloxAgent,
-    UnrealAgent,
-    WebsiteAgent,
-)
-from .knowledge import KnowledgeBase
-from .memory import MemoryStore
-from .personality import Personality
-from .planner import Planner
 
 __all__ = ["NekoAI"]
